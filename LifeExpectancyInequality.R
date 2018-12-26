@@ -3,7 +3,7 @@ life_exp <- read_csv("/Users/ShuLFO/Downloads/UNdata_Export_20181226_154053374.c
 View(life_exp)
 head(life_exp$`Country or Area`)
 
-subdata <- life_exp %>% 
+subdata <- life_exp %>%  
         filter(Year == "2000-2005") %>% 
         select("Country or Area", "Subgroup", "Value") %>% 
         spread("Subgroup", "Value")
